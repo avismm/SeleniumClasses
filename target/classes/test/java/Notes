@@ -1,0 +1,45 @@
+What is Selenium
+Selenium is a tool that helps us to automate webApplications
+
+get() vs navigate().
+
+Both can navigate to a particular url.
+get()---> u cannot go back or forward in history
+navigate() --> u can go back and forward and also refresh
+
+get()---> waits for the whole page to load
+navigate() --> doesn't wait for the whole page to load
+
+close() --> closes the current tab
+quit() --> closes the browser session
+
+
+HTML locators on a web page
+name
+id
+class
+linktext
+partiallinktext
+tagname
+xpath
+css
+
+precausions:
+
+1. Please choose a locator that is unique
+2. Try and avoid locators that contain numbers as these may not be static
+if there are locators with duplicate values, selenium will find the first one and interact with it.
+
+linktext:
+1. The element must be an "a" tag, a tag is also called anchor tag and it usually contains links
+2. The element must have some text
+If one of the conditions above is not fulfilled, you cannot use the text.
+
+partiallinktext
+1. The element must be an "a" tag, a tag is also called anchor tag and it usually contains links
+2. The element must have some text
+If one of the conditions above is not fulfilled, you cannot use the text.
+
+webElement commands:
+1. clear() --> clears the text box
+2. getText() --> gets the text of the element. If there is no text, it will return null
