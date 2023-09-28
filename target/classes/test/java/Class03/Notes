@@ -1,0 +1,73 @@
+xpath:
+This is another way to locate html elements by writing the path starting from the parent
+It is not widely used because:
+1) The html document could change
+2) The path could be too long
+
+syntax example:
+ /html/body/header/
+
+ Relative xpath:
+ syntax:// tagname[@attribute='value']
+ get me a tagname "" which has attribute "" whose value is ""
+
+ e.g., //link[@rel='stylesheet']
+ translation => get me a tagname link which has attribute rel whose value is 'stylesheet
+
+ Using relative xpath, we can find an element using either text or attributes
+
+
+ Using text method:
+ The element must have text
+ Syntax for using text: // tagname[text()='value]
+ e.g., //a[text()='Create new account']
+
+ contains method:
+ Allows us to use partial text. Helpful when we have no other option and all available attributes have either spaces or digits
+syntax:
+ //tagname[contains(text(),'value')] e.g., //a[contains(text(), 'Create')]
+ //tagname[contains(@attribute,'value')] e.g.,//input[contains(@ref,'facebook')], //a[contains(@href,'facebook_login')]
+
+ starts-with method:
+ Similar to the contains() method but must use the starting string of a text
+ Allows us to use partial text that starts with a string
+ //tagname[starts-with(text(),'value')] e.g., //a[starts-with(text(), 'Create')]
+ //tagname[starts-with(@attribute,'value')] e.g.,//input[starts-with(@ref,'facebook')]
+
+ Indexing: This is used where we have identical elements
+ Syntax: (//input[@class='form-control backup'])[1]
+ Note: Indexing should only be used if there is no other option available as element positions can change over time
+
+ Use of multiple conditions
+ We can use and and operator to specify more than one condition for our element, to locate it uniquely
+ Syntax example: //input[@attribute='value' and @attribute='value'] e.g., //input[@data-detail='two' and @name='customField']
+
+
+ CSS
+ Similar to xpath but does not allow access using text.
+ Syntax:
+ Using an attribute => tagname[attribute='value']
+ Using ID => tagname#value=> Works for the attribute name ID. # stands for ID
+ Using class where there are spaces => tagname.vaue. If there is space, replace with a dot
+ Contains: tagname[attribute*='value'] ==> Whenever an attribute has digits or spaces, we can use it to avoid locators being redundant.
+start-with: tagname[attribute^='value']  ==>
+Ends with: tagname[attribute$='value'] ==>
+
+Web Elements:
+Radio buttons
+You can select one option at a time.
+
+Additional wedElement commands / methods:
+isSelected() ==> Checks whether the element is selected or not. Returns a boolean
+isEnabled() ==> Checks whether the element is enabled or not. Returns a boolean
+isDisplayed() ==> If the element is visible on the screen or not. Returns a boolean
+
+Checking all buttons
+Find all buttons
+get them n a list
+loop through the list
+       If you find what you desire, click on it
+       If not, continue with loop
+
+
+
