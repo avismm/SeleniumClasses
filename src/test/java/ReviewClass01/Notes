@@ -1,0 +1,82 @@
+The first step towards testing is
+1-Initiate the instance of the WebDriver
+2- driver.get("url); or driver.navigate.to("url"); driver.navigate.to("url"); allows user to click on the back button, forward buttons
+and refreshing. get(); waits for the whole page to load while navigate(); doesn't wait for the whole page to load.
+3- Assuming we are using driver.navigate.to("url"); and finding an element and clicking on it. However,
+if the button taking two seconds to appear, the system will not be able to find the element.
+
+driver.close();==> closes the current tab.
+driver.quit();==> quits the whole browser session
+navigate.refresh();
+navigate.back();
+navigate.forward();
+
+WebDriver commands
+driver.manager().window().maximize(); ==> maximizes the window
+driver.getTitle(); ==> gets title of the current page.
+driver.getCurrentUrl(); ==> gets title of the current url
+
+Locators ==> Help us to locate WebElements
+types:id, name, class, linkTest, partialLinktext, xpath, css, tagname.
+We have a variety of locators so that we can choose the ones suitable to access an element.
+In selenium 4, there are more than 8 locators available. selenium 3 has 8 locators available.
+
+Tips for writing locators:
+1- Avoid numbers and spaces
+2- Indexing should be your last option
+3- Always copy and past values to avoid mistakes
+
+Syntax:(for id, name, class)
+driver.findElement(By.id("id number"));
+
+linkText and partiallinktext:
+1- The element must be in the "a" tag. Also called the anchor tag.
+2- There must be some text present in the element.
+Syntax:
+driver.findElement(By.linkText("text"));
+driver.findElement(By.patialLinkText("partial text"));
+
+tagName
+tagName is used by simply specifying the tagName
+However, there can be several elements with the same tagName. it should be carefully used based on the intended use-case
+driver.findElement(By.tagName("a"));
+
+xpath:
+You can use any attribute as long as it is unique and fulfills expectations
+
+relative xpath
+attribute=> // tagname[@attribute='value']
+text// tagname[text()='value']
+
+Other xpath methods:
+contains: If the only available attribute contains digits or spaces, we can use this method
+// tagname[contains(@attribute,'value')]
+// tagname[contains(text(),'value')]
+starts-with:
+// tagname[starts-with(text(),'value')]
+// tagname[starts-with(@attribute,'value')]
+
+Where the element tags and attributes are exactly the same, indexing can be used
+
+and:
+We can use "and" to add more conditions to xpath to identify the elements more uniquely
+
+Css:
+syntax => tagname[attribute='value']
+for ids, we can use tagname#value
+for classes, we can use tagname.value. The dot is also used to replace spaces between words
+^ starts with
+$ ends with
+
+
+Radio buttons
+Methods
+isDisplayed();
+isEnabled();
+isSelected();
+
+
+
+
+
+

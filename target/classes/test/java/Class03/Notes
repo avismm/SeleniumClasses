@@ -1,15 +1,17 @@
-xpath:
+xpath / absolute xpath
 This is another way to locate html elements by writing the path starting from the parent
 It is not widely used because:
 1) The html document could change
 2) The path could be too long
+
+
 
 syntax example:
  /html/body/header/
 
  Relative xpath:
  syntax:// tagname[@attribute='value']
- get me a tagname "" which has attribute "" whose value is ""
+ get me a tagName "" which has attribute "" whose value is ""
 
  e.g., //link[@rel='stylesheet']
  translation => get me a tagname link which has attribute rel whose value is 'stylesheet

@@ -1,0 +1,52 @@
+Dropdown:
+Normally consists of a list of values to select from
+Approach.
+If the select box has a select tag, use the selenium Select class to deal with it
+If not deal with it like a normal web element
+
+Steps:
+1)Locate the element (dd) using appropriate locator
+2)Create and object of the select class and pass in the WebElement
+3)Use the methods to select the desired option
+    we can select a value by
+        byVisibleText()
+        byIndex()
+        vyValue()
+
+Multiselect dropdowns:
+        In the cse of multi-select dropdowns, we have other methods
+        deSelectByVisibleText
+        deSelectByValue
+        deSelectByValue
+        isMultiple();//to check if the selectbox is a multiselect or not.
+
+Alerts:
+1)Web based popups: These are easy to handle in the same way as we do with regular webElements. examples are popups.
+2)Window based popups: We cannot handle them using selenium. e.g., when you want to attach a file.
+3)Javascript based alerts: Are dealt with using the Alerts class in selenium.
+    We can:
+    accept()
+    dismiss()
+    sendKeys()
+    gettext()
+
+Syntax:
+alert=driver.switchTo.alert();
+alert.dismiss()
+alert.accept()
+
+Frames:
+Note: By default, selenium is focusing on the main page
+We must switch the view the iframe, find the required element and the switch again to default
+
+Switching to the iframe
+driver.switchTo.frame(index);
+driver.switchTo.frame(name or id);
+driver.switchTo.frame(webElement);
+
+Find the element on the iframe
+Perform the operation on the element
+
+Switching to the default view:
+driver.switchTo.DefaultContent();
+

@@ -1,0 +1,5 @@
+Dropdowns:
+
+There are some advanced methods available for handling dropdowns
+    deselect
+    getOptoins => Common btn dropdowns with a select tab as well as a multiselect DD

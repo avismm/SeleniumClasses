@@ -1,0 +1,7 @@
+Window handles:
+Each tab is treated as a window by selenium
+Each tab that opens has an address
+
+Syntax:
+driver.gerWindowHandle(); => To know the window handle of the current page
+driver.gerWindowHandles(); => returns all window handles that are open, in a random order
