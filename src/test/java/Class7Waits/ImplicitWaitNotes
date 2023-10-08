@@ -1,0 +1,17 @@
+Implicit wait will wait until the web element is found in the DOM. Code
+if the element is not found, an exception will be thrown
+if element is found, it will move to the next piece of code
+if the web element is already found (already existed) but disabled, the implicit wait will not work.
+
+Syntax:
+ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+ Explicit wait: This is a conditional wait. It waits for a certain condition to be
+ fulfilled as specified by the end user. e.g., you click on the enable button and wait until the element gets enabled,
+ or you click on the display button and wait for the element to appear.
+
+ In the above scenarios, the HTML code is already there in the DOM but the element is either disabled or hidden.
+ Explicit is normally used when the code is already there.
+
+ Syntax:
+ wait.until.elementIsEnabled(webElement)
