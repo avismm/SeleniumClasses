@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.time.Duration;
+
 public class CommonMethods {
     public static  WebDriver driver;
     public static void openBrowserAndLaunchApplication(String url, String browser){
@@ -18,11 +20,11 @@ public class CommonMethods {
                 break;
         }
 
-
         // goto facebook.com
         driver.get(url);
         //        maximize the window
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
     public static void closeBrowser(){
