@@ -20,9 +20,8 @@ public class CommonMethods {
                 break;
         }
 
-        // goto facebook.com
         driver.get(url);
-        //        maximize the window
+        //maximize the window
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }

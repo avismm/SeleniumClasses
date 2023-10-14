@@ -14,17 +14,16 @@ public class ExplicitWaitE3 extends CommonMethods {
         String browser="chrome";
         openBrowserAndLaunchApplication(url,browser);
 
-        //finding the checkbox button to click on
+        //finding the changetext button to click on
         WebElement changeTxtBtn=driver.findElement(By.xpath("//button[@id='changetext_button']"));
         changeTxtBtn.click();
 
 
-        //Wait until the checkbox has been selected
-        //get the state of the checkbox
+        //Wait until the text has changed in the element
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Ssyntaxtechs']")));
 
-        //checking whether the checkbox is selected
+       //find the element and display the text
         String text=driver.findElement(By.xpath("//h2[text()='Ssyntaxtechs']")).getText();
         System.out.println(text);
 
