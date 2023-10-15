@@ -2,7 +2,7 @@ package Class7Tables;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.CommonMethods;
+import Utils.CommonMethods;
 
 import java.util.List;
 

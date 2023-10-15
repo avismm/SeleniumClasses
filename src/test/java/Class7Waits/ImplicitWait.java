@@ -1,6 +1,7 @@
 package Class7Waits;
 
-import utils.CommonMethods;
+
+import Utils.CommonMethods;
 
 public class ImplicitWait extends CommonMethods {
     public static void main(String[] args) {

@@ -2,8 +2,7 @@ package Class7Waits;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.CommonMethods;
-
+import Utils.CommonMethods;
 public class E1ImplicitWait extends CommonMethods {
     public static void main(String[] args) {
         String url="http://35.175.58.98/synchronization-waits.php";

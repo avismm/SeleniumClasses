@@ -1,0 +1,15 @@
+With advanced Xpath, we can look for an element that is nearby the one we want to search. i.e., the nearest approachable element.
+
+The syntax for advanced x-path where we have a following sibling is:
+//tagName[@attributeName='value of the attribute']/following-sibling::tagName[indexNo]
+
+The syntax for advanced x-path where we have a preceding sibling is:
+//tagName[@attributeName='value of the attribute']/preceding-sibling::tagName[indexNo]
+
+The syntax for advanced x-path where we have a child element:
+//tagName[@attributeName='value of the attribute']/child::tagName[indexNo]
+
+More conditions can be specified to refine the xpath. e.g.,
+//tagName[@attributeName='value of the attribute']/child::tagName[@attributeName ='attribute value']
+
+

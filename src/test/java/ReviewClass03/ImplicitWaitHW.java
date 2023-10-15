@@ -2,7 +2,7 @@ package ReviewClass03;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utils.CommonMethods;
+import Utils.CommonMethods;
 
 public class ImplicitWaitHW extends CommonMethods {
     public static void main(String[] args) {
